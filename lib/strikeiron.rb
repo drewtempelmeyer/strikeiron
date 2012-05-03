@@ -10,7 +10,7 @@ require 'strikeiron/tax_result'
 module Strikeiron
 
   # The location of the Strikeiron Online Sales Tax WSDL
-  WSDL = 'http://wsparam.strikeiron.com/SpeedTaxSalesTax3?WSDL'
+  WSDL = 'https://wsparam.strikeiron.com/SpeedTaxSalesTax3?WSDL'
 
   class << self
     attr_accessor :configuration
@@ -54,7 +54,7 @@ module Strikeiron
       response_code = response[:get_sales_tax_value_response][:get_sales_tax_value_result][:service_status][:status_nbr]
 
       # Raise exceptions if there was an error when calculating the tax
-      case response_code
+      case response_code.to_i
       when 401
         raise RuntimeError, 'Invalid From address.'
       when 402
@@ -66,7 +66,6 @@ module Strikeiron
       end
 
       Strikeiron::TaxResult.from_soap(response[:get_sales_tax_value_response][:get_sales_tax_value_result][:service_result])
-      # response[:get_sales_tax_value_response][:get_sales_tax_value_result][:service_result]
     end
 
     # Performs a request to obtain a list of all available category names and their corresponding ID number.

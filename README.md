@@ -68,4 +68,4 @@ Hopefully.
 
 ## Furthermore
 
-I am in no was associated with Strikeiron.
+I am in no way associated with Strikeiron.
