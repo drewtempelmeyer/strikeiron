@@ -4,6 +4,8 @@ strikeiron uses the Strikeiron Online Sales Tax API to calculate online sales ta
 
 For more information on Strikeiron, Inc., go to http://www.strikeiron.com/.
 
+[![Build Status](https://secure.travis-ci.org/drewtempelmeyer/strikeiron.png)](http://travis-ci.org/drewtempelmeyer/strikeiron)
+
 ## Installation
 
 Add this line to your application's Gemfile:
