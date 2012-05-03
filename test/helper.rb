@@ -20,5 +20,6 @@ end
 
 # Disable Savon logging to get a cleaner test output
 Savon.configure do |config|
-  config.log = false
+  config.log          = false
+  config.soap_version = 2  # use SOAP 1.2
 end

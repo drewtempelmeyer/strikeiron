@@ -1,10 +1,10 @@
-require 'savon'
-require 'strikeiron/version'
-require 'strikeiron/configuration'
-require 'strikeiron/address'
-require 'strikeiron/tax_value'
-require 'strikeiron/jurisdiction'
-require 'strikeiron/tax_result'
+require "savon"
+require "strikeiron/version"
+require "strikeiron/configuration"
+require "strikeiron/address"
+require "strikeiron/tax_value"
+require "strikeiron/jurisdiction"
+require "strikeiron/tax_result"
 
 # Strikeiron calculates online sales tax for your online service based on your local tax rules.
 module Strikeiron

@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Strikeiron::VERSION
 
-  gem.add_dependency 'savon', '~> 0.9.6'
+  gem.add_runtime_dependency 'savon', '~> 0.9.6'
 
   gem.add_development_dependency 'rake', '~> 0.9.2'
   gem.add_development_dependency 'rdoc', '~> 3.12'

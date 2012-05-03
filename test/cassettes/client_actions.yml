@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://wsparam.strikeiron.com/SpeedTaxSalesTax3?WSDL
+    uri: https://wsparam.strikeiron.com/SpeedTaxSalesTax3?WSDL
     body:
       encoding: US-ASCII
       string: ''
@@ -283,6 +283,6 @@ http_interactions:
         \   <wsdl:port name=\"SpeedTaxSoap\" binding=\"tns:SpeedTaxSoap\">\r\n      <soap:address
         location=\"http://wsparam.strikeiron.com/StrikeIron/SpeedTaxSalesTax3/SpeedTax\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
-    http_version: 
+    http_version:
   recorded_at: Thu, 03 May 2012 14:28:00 GMT
 recorded_with: VCR 2.1.1

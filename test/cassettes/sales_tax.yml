@@ -88,6 +88,6 @@ http_interactions:
         \       <LicenseAction>Decremented hit count</LicenseAction>\r\n        <RemainingHits>97</RemainingHits>\r\n
         \       <Amount>0</Amount>\r\n      </SISubscriptionInfo>\r\n    </GetSalesTaxValueResponse>\r\n
         \ </soap:Body>\r\n</soap:Envelope>"
-    http_version: 
+    http_version:
   recorded_at: Thu, 03 May 2012 17:13:19 GMT
 recorded_with: VCR 2.1.1
