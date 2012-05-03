@@ -1,4 +1,4 @@
-# Strikeiron
+# strikeiron
 
 strikeiron uses the Strikeiron Online Sales Tax API to calculate online sales tax to alleviate maintaining tax codes.
 
