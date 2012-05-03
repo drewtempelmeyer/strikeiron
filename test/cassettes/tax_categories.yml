@@ -1,0 +1,408 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://wsparam.strikeiron.com/StrikeIron/SpeedTaxSalesTax3/SpeedTax
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://www.strikeiron.com/"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ins0="http://www.strikeiron.com/"><env:Body><ins0:GetSalesTaxCategories><ins0:UserID>user_id</ins0:UserID><ins0:Password>password</ins0:Password></ins0:GetSalesTaxCategories></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - ! '"http://www.strikeiron.com/GetSalesTaxCategories"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '470'
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 03 May 2012 15:21:36 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      X-Aspnet-Version:
+      - 4.0.30319
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '31966'
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"
+        xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n
+        \ <soap:Body>\r\n    <GetSalesTaxCategoriesResponse xmlns=\"http://www.strikeiron.com/\">\r\n
+        \     <GetSalesTaxCategoriesResult>\r\n        <ServiceStatus>\r\n          <StatusNbr>200</StatusNbr>\r\n
+        \         <StatusDescription>Successful</StatusDescription>\r\n        </ServiceStatus>\r\n
+        \       <ServiceResult>\r\n          <SalesTaxCategory>\r\n            <Category>Alcohol</Category>\r\n
+        \           <CategoryID>01051000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Alcoholic Beverages</Category>\r\n
+        \           <CategoryID>01050000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Beer</Category>\r\n
+        \           <CategoryID>01052000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Books</Category>\r\n
+        \           <CategoryID>01501500</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Charges necessary to
+        complete sale other than delivery and installation</Category>\r\n            <CategoryID>04800000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Clothing</Category>\r\n
+        \           <CategoryID>01100500</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Clothing Accessories
+        and equipment</Category>\r\n            <CategoryID>01101000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Computer
+        Hardware</Category>\r\n            <CategoryID>01150500</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Computer Hardware Consulting</Category>\r\n
+        \           <CategoryID>02100500</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Computer Hardware Consulting
+        including the Sale of Computer Software</Category>\r\n            <CategoryID>02100505</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Computer
+        Hardware RandD</Category>\r\n            <CategoryID>01150510</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Computer
+        Services</Category>\r\n            <CategoryID>01152000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Computer Services Internet
+        Service Provider Fees</Category>\r\n            <CategoryID>01152010</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Computer
+        Services Set Up Fees-Custom Software</Category>\r\n            <CategoryID>01152020</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Computer
+        Services Set up Fees-Packaged Software</Category>\r\n            <CategoryID>01152015</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Computer
+        Services Software Customization</Category>\r\n            <CategoryID>01152005</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Computer
+        Services Web Hosting</Category>\r\n            <CategoryID>01152025</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Computer
+        Software (both prewritten and non-prewritten) delivered electronically</Category>\r\n
+        \           <CategoryID>01151605</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Computer Software Consulting</Category>\r\n
+        \           <CategoryID>02100600</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Computer Software Consulting
+        Including the Sale of Computer Software</Category>\r\n            <CategoryID>02100605</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Computers</Category>\r\n
+        \           <CategoryID>01150000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Construction</Category>\r\n
+        \           <CategoryID>01200000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Costumes</Category>\r\n
+        \           <CategoryID>01100530</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Coupons and Cash Discounts</Category>\r\n
+        \           <CategoryID>04150000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Custom Software</Category>\r\n
+        \           <CategoryID>01151500</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Custom Software Downloaded</Category>\r\n
+        \           <CategoryID>01151505</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Custom Software Licensing</Category>\r\n
+        \           <CategoryID>01151510</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Custom Software sold
+        with tangle property</Category>\r\n            <CategoryID>01151520</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Custom
+        Software Sold without tangible property</Category>\r\n            <CategoryID>01151515</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Digital
+        Audio Visual Works with rights conditioned on continued payments</Category>\r\n
+        \           <CategoryID>01651501</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Digital Audio Visual
+        Works with rights of less than permanent use</Category>\r\n            <CategoryID>01651001</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Digital
+        Audio Visual Works with rights of permanent use</Category>\r\n            <CategoryID>01650501</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Digital
+        Audio Works with rights conditioned on continued payments</Category>\r\n            <CategoryID>01651502</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Digital
+        Audio Works with rights of less than permanent use</Category>\r\n            <CategoryID>01651002</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Digital
+        Audio Works with rights of permanent use</Category>\r\n            <CategoryID>01650502</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Digital
+        Books with rights conditioned on continued payments</Category>\r\n            <CategoryID>01651503</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Digital
+        Books with rights of less than permanent use</Category>\r\n            <CategoryID>01651003</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Digital
+        Books with rights of permanent use</Category>\r\n            <CategoryID>01650503</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Digital
+        Products</Category>\r\n            <CategoryID>01650000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Digital Products Transferred
+        Electronically</Category>\r\n            <CategoryID>01652000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Downloaded
+        Packaged Software</Category>\r\n            <CategoryID>01151005</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Early
+        Payment Discount</Category>\r\n            <CategoryID>04153000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Educational
+        Materials</Category>\r\n            <CategoryID>01550000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Environmental
+        Conservation</Category>\r\n            <CategoryID>01250000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Finance
+        Charges</Category>\r\n            <CategoryID>04200000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Finance Charges-Interest</Category>\r\n
+        \           <CategoryID>04201000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Food</Category>\r\n
+        \           <CategoryID>01350000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Food Products</Category>\r\n
+        \           <CategoryID>01350500</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Food Products-Beverages</Category>\r\n
+        \           <CategoryID>01350526</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Food Products-Bottled
+        Water</Category>\r\n            <CategoryID>01350528</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Food Products-Candy</Category>\r\n
+        \           <CategoryID>01350505</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Food Products-Carbonated
+        Beverages</Category>\r\n            <CategoryID>01350527</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Food
+        Products-Confectionery Foods</Category>\r\n            <CategoryID>01350506</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Food
+        Products-Dietary Supplements</Category>\r\n            <CategoryID>01350510</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Food
+        Products-Food and Food Ingredients</Category>\r\n            <CategoryID>01350515</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Food
+        Products-Food Sold in Vending Machines</Category>\r\n            <CategoryID>01350520</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Food
+        Products-Fruit and Vegetable Juice less than 15% natural</Category>\r\n            <CategoryID>01350529</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Food
+        Products-Fruit and Vegetable Juice less than 25% natural</Category>\r\n            <CategoryID>01350530</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Food
+        Products-Fruit and Vegetable Juice less than 70% natural</Category>\r\n            <CategoryID>01350531</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Food
+        Products-Groceries</Category>\r\n            <CategoryID>01350517</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Food
+        Products-Ice</Category>\r\n            <CategoryID>01350532</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Food
+        Products-Snack Food</Category>\r\n            <CategoryID>01350507</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Food
+        Products-Soft Drinks</Category>\r\n            <CategoryID>01350525</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Formal
+        Clothing</Category>\r\n            <CategoryID>01100525</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Fur Clothing</Category>\r\n
+        \           <CategoryID>01100508</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>General Merchandise</Category>\r\n
+        \           <CategoryID>01010000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Government Transactions</Category>\r\n
+        \           <CategoryID>01300000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Labor Charges Only</Category>\r\n
+        \           <CategoryID>02301000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Late Payment Charges</Category>\r\n
+        \           <CategoryID>04250000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Late Payment Charges-NSF
+        check fees from Bank</Category>\r\n            <CategoryID>04250600</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Late
+        Payment Charges-NSF Check fees from Vendor</Category>\r\n            <CategoryID>04250500</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Leases
+        and Rentals</Category>\r\n            <CategoryID>01400000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Leases
+        and Rentals-Commercial Rentals</Category>\r\n            <CategoryID>01401000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Leases
+        and Rentals-Commercial Rentals</Category>\r\n            <CategoryID>01401000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Leases
+        and Rentals-Leases of General Merchandise</Category>\r\n            <CategoryID>01405500</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Leases
+        and Rentals-Leases of Motor Vehicles</Category>\r\n            <CategoryID>01406000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Leases
+        and Rentals-Leases of Real Property</Category>\r\n            <CategoryID>01407000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Leases
+        and Rentals-Transient Rentals</Category>\r\n            <CategoryID>01402000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Magazines</Category>\r\n
+        \           <CategoryID>01501200</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Magazines published
+        annually-Retail</Category>\r\n            <CategoryID>01501220</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Magazines
+        published annually-Subscription</Category>\r\n            <CategoryID>01501260</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Magazines
+        published monthly-Retail</Category>\r\n            <CategoryID>01501205</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Magazines
+        published monthly-Subscription</Category>\r\n            <CategoryID>01501245</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Magazines
+        published quarterly-Retail</Category>\r\n            <CategoryID>01501215</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Magazines
+        published quarterly-Subscription</Category>\r\n            <CategoryID>01501255</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Magazines
+        published semiannually-Retail</Category>\r\n            <CategoryID>01501225</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Magazines
+        published semiannually-Subscription</Category>\r\n            <CategoryID>01501265</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Magazines
+        published semimonthly-Retail</Category>\r\n            <CategoryID>01501210</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Magazines
+        published semimonthly-Subscription</Category>\r\n            <CategoryID>01501250</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Magazines
+        published weekly-Retail</Category>\r\n            <CategoryID>01501230</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Magazines
+        published weekly-Subscription</Category>\r\n            <CategoryID>01501270</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Maintenance
+        and Service Contracts</Category>\r\n            <CategoryID>02400000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Maintenance
+        Contract-Optional for Canned Software with Upgrades Provided Electronically</Category>\r\n
+        \           <CategoryID>02401110</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Maintenance Contract-Optional
+        for Canned Software with Upgrades via Tangible Personal Property</Category>\r\n
+        \           <CategoryID>02401105</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Maintenance Contracts
+        for Leases and Rentals</Category>\r\n            <CategoryID>02401500</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Maintenance
+        Contracts with Transfer of TPP</Category>\r\n            <CategoryID>02401200</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Mandatory
+        Computer Hardware/Software Maintenance Contracts</Category>\r\n            <CategoryID>02401000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Manufacturer
+        Coupon or Discount</Category>\r\n            <CategoryID>04151000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Manufacturing</Category>\r\n
+        \           <CategoryID>01310000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Manufacturing Machinery
+        and Equipment</Category>\r\n            <CategoryID>01310500</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Manufacturing
+        Machinery and Equipment for Economic Expansion</Category>\r\n            <CategoryID>01310530</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Manufacturing
+        Machinery and Equipment for Existing Facilities</Category>\r\n            <CategoryID>01310520</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Manufacturing
+        Machinery and Equipment for New Facilities</Category>\r\n            <CategoryID>01310550</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Manufacturing
+        Machinery and Equipment for Physical Expansion of Facilities </Category>\r\n
+        \           <CategoryID>01310540</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Manufacturing Machinery
+        and Equipment for RandD</Category>\r\n            <CategoryID>01310510</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Manufacturing
+        Repair Parts for Economic Expansion</Category>\r\n            <CategoryID>01310531</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Manufacturing
+        Repair Parts for Existing Facilities</Category>\r\n            <CategoryID>01310521</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Manufacturing
+        Repair Parts for New Faciliites</Category>\r\n            <CategoryID>01310551</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Manufacturing
+        Repair Parts for Physical Expansion of Facilities</Category>\r\n            <CategoryID>01310541</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Newspapers</Category>\r\n
+        \           <CategoryID>01500500</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Newspapers-Retail</Category>\r\n
+        \           <CategoryID>01500510</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Newspapers-Subscription</Category>\r\n
+        \           <CategoryID>01500520</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Non-Itemized Labor and
+        Material</Category>\r\n            <CategoryID>02303000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Optional Computer Hardware/Software
+        Maintenance Contracts</Category>\r\n            <CategoryID>02401100</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Optional
+        Computer Hardware/Software Maintenance Contracts wtih Transfer of TPP</Category>\r\n
+        \           <CategoryID>02401115</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Over-the-counter drugs
+        for human use with a prescription</Category>\r\n            <CategoryID>01450521</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Over-the-counter
+        drugs for human use without a prescription</Category>\r\n            <CategoryID>01450520</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Packaged
+        Software</Category>\r\n            <CategoryID>01151000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Packaged Software Licensing</Category>\r\n
+        \           <CategoryID>01151010</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Packaged Software sold
+        without tangible property</Category>\r\n            <CategoryID>01151015</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Packages
+        Software sold with tangle property</Category>\r\n            <CategoryID>01151020</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Periodicals</Category>\r\n
+        \           <CategoryID>01501000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Periodicals published
+        annually-Retail</Category>\r\n            <CategoryID>01501020</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Periodicals
+        published annually-Subscription</Category>\r\n            <CategoryID>01501060</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Periodicals
+        published monthly-Retail</Category>\r\n            <CategoryID>01501005</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Periodicals
+        published monthly-Subscription</Category>\r\n            <CategoryID>01501045</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Periodicals
+        published quarterly-Retail</Category>\r\n            <CategoryID>01501015</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Periodicals
+        published quarterly-Subscription</Category>\r\n            <CategoryID>01501055</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Periodicals
+        published semiannually-Retail</Category>\r\n            <CategoryID>01501025</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Periodicals
+        published semiannually-Subscription</Category>\r\n            <CategoryID>01501065</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Periodicals
+        published semimonthly-Retail</Category>\r\n            <CategoryID>01501010</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Periodicals
+        published semimonthly-Subscription</Category>\r\n            <CategoryID>01501050</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Periodicals
+        published weekly-Retail</Category>\r\n            <CategoryID>01501030</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Periodicals
+        published weekly-Subscription</Category>\r\n            <CategoryID>01501070</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Prepared
+        food as a single item without eating utensils</Category>\r\n            <CategoryID>01351010</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Prepared
+        Food for offsite consumption</Category>\r\n            <CategoryID>01351020</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Prepared
+        Food sold without eating utensils</Category>\r\n            <CategoryID>01351005</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Prepared
+        Food-Bakery items sold without eating utensils</Category>\r\n            <CategoryID>01351015</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Prepared
+        Foods</Category>\r\n            <CategoryID>01351000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Prepared Foods-Grocery
+        Store</Category>\r\n            <CategoryID>01351030</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Professional/Professional
+        Services</Category>\r\n            <CategoryID>02100000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Protective Equipment</Category>\r\n
+        \           <CategoryID>01101500</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Religious Books</Category>\r\n
+        \           <CategoryID>01502500</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Retailer Coupon or Discount</Category>\r\n
+        \           <CategoryID>04151000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>School Art Supply</Category>\r\n
+        \           <CategoryID>01555000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>School Books</Category>\r\n
+        \           <CategoryID>01502000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>School Computer Supply</Category>\r\n
+        \           <CategoryID>01552500</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>School Instructional
+        Material</Category>\r\n            <CategoryID>01551000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>School Supplies</Category>\r\n
+        \           <CategoryID>01550500</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Shipping and Handling</Category>\r\n
+        \           <CategoryID>03000000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Shipping and Handling</Category>\r\n
+        \           <CategoryID>03000000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Shipping and Handling-Delivery
+        Charges for Direct Mail</Category>\r\n            <CategoryID>03800000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Shipping
+        and Handling-Handling Charges</Category>\r\n            <CategoryID>03200000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Shipping
+        and Handling-Handling, Crating, packing, preparation for mailing or delivery,
+        and similar charges</Category>\r\n            <CategoryID>03500000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Shipping
+        and Handling-Optional, Common Carrier, FOB Origin</Category>\r\n            <CategoryID>03101000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Shipping
+        and Handling-Postage</Category>\r\n            <CategoryID>03400000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Shipping
+        and Handling-Shipping and Handling</Category>\r\n            <CategoryID>03300000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Shipping
+        and Handling-Shipping Charges</Category>\r\n            <CategoryID>03100000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Shipping
+        and Handling-Shipping Charges excluding direct mail</Category>\r\n            <CategoryID>03750000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Shipping
+        and Handling-Shipping Charges including direct mail</Category>\r\n            <CategoryID>03700000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Shipping
+        and Handling-Transportation, shipping, postage, and similar charges</Category>\r\n
+        \           <CategoryID>03600000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Sparkling Wine Champagne</Category>\r\n
+        \           <CategoryID>01053010</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Specified Digital Products
+        with rights conditioned on continued payments</Category>\r\n            <CategoryID>01651500</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Specified
+        Digital Products with rights of less than permanent use</Category>\r\n            <CategoryID>01651000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Specified
+        Digital Products with rights of permanent use</Category>\r\n            <CategoryID>01650500</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Sports
+        and Recreational Equipment</Category>\r\n            <CategoryID>01102000</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Trade
+        Discount</Category>\r\n            <CategoryID>04155000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Uniforms</Category>\r\n
+        \           <CategoryID>01100515</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Volume Discount</Category>\r\n
+        \           <CategoryID>04154000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Wine</Category>\r\n
+        \           <CategoryID>01053000</CategoryID>\r\n          </SalesTaxCategory>\r\n
+        \         <SalesTaxCategory>\r\n            <Category>Wine 17-24% Alcohol
+        by Volume</Category>\r\n            <CategoryID>01053020</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n          <SalesTaxCategory>\r\n            <Category>Wine
+        under 17% Alcohol by Volume</Category>\r\n            <CategoryID>01053030</CategoryID>\r\n
+        \         </SalesTaxCategory>\r\n        </ServiceResult>\r\n      </GetSalesTaxCategoriesResult>\r\n
+        \     <SISubscriptionInfo>\r\n        <LicenseStatusCode>0</LicenseStatusCode>\r\n
+        \       <LicenseStatus>Valid license key</LicenseStatus>\r\n        <LicenseActionCode>7</LicenseActionCode>\r\n
+        \       <LicenseAction>No hit deduction for invocation</LicenseAction>\r\n
+        \       <RemainingHits>100</RemainingHits>\r\n        <Amount>0</Amount>\r\n
+        \     </SISubscriptionInfo>\r\n    </GetSalesTaxCategoriesResponse>\r\n  </soap:Body>\r\n</soap:Envelope>"
+    http_version: 
+  recorded_at: Thu, 03 May 2012 15:21:36 GMT
+recorded_with: VCR 2.1.1

@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://wsparam.strikeiron.com/StrikeIron/SpeedTaxSalesTax3/SpeedTax
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://www.strikeiron.com/"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ins0="http://www.strikeiron.com/"><env:Body><GetRemainingHits><wsdl:UserID>user_id</wsdl:UserID><wsdl:Password>password</wsdl:Password></GetRemainingHits></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - ! '"http://wsparam.strikeiron.com/StrikeIron/SpeedTaxSalesTax3/SpeedTax/GetRemainingHits"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '450'
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 03 May 2012 16:28:46 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      X-Aspnet-Version:
+      - 4.0.30319
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '642'
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+        xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n
+        \ <soap:Header />\r\n  <soap:Body>\r\n    <SISubscriptionInfo xmlns=\"http://www.strikeiron.com/\">\r\n
+        \     <LicenseStatusCode>0</LicenseStatusCode>\r\n      <LicenseStatus>Valid
+        license key</LicenseStatus>\r\n      <LicenseActionCode>5</LicenseActionCode>\r\n
+        \     <LicenseAction>Get remaining hits</LicenseAction>\r\n      <RemainingHits>100</RemainingHits>\r\n
+        \     <Amount>0</Amount>\r\n    </SISubscriptionInfo>\r\n  </soap:Body>\r\n</soap:Envelope>"
+    http_version: 
+  recorded_at: Thu, 03 May 2012 16:28:46 GMT
+recorded_with: VCR 2.1.1

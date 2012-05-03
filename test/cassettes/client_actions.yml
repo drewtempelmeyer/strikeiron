@@ -1,0 +1,288 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://wsparam.strikeiron.com/SpeedTaxSalesTax3?WSDL
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 03 May 2012 14:28:00 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      X-Aspnet-Version:
+      - 4.0.30319
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '19714'
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wsdl:definitions xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\"
+        xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\"
+        xmlns:tns=\"http://www.strikeiron.com/\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\"
+        xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\" xmlns:s=\"http://www.w3.org/2001/XMLSchema\"
+        xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" targetNamespace=\"http://www.strikeiron.com/\"
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">\r\n  <wsdl:types>\r\n    <s:schema
+        elementFormDefault=\"qualified\" targetNamespace=\"http://www.strikeiron.com/\">\r\n
+        \     <s:element name=\"GetSalesTaxValue\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"UserID\" type=\"s:string\" />\r\n            <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"Password\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"ShipFrom\" type=\"tns:SpeedTaxAddress\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"ShipTo\"
+        type=\"tns:SpeedTaxAddress\" />\r\n            <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"TaxValueRequests\" type=\"tns:ArrayOfTaxValueRequest\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:complexType name=\"SpeedTaxAddress\">\r\n        <s:sequence>\r\n
+        \         <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"StreetAddress\"
+        type=\"s:string\" />\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"City\" type=\"s:string\" />\r\n          <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"State\" type=\"s:string\" />\r\n          <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"ZIPCode\" type=\"s:string\" />\r\n
+        \       </s:sequence>\r\n      </s:complexType>\r\n      <s:complexType name=\"ArrayOfTaxValueRequest\">\r\n
+        \       <s:sequence>\r\n          <s:element minOccurs=\"0\" maxOccurs=\"unbounded\"
+        name=\"TaxValueRequest\" nillable=\"true\" type=\"tns:TaxValueRequest\" />\r\n
+        \       </s:sequence>\r\n      </s:complexType>\r\n      <s:complexType name=\"TaxValueRequest\">\r\n
+        \       <s:sequence>\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"SalesTaxCategoryOrCategoryID\" type=\"s:string\" />\r\n          <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Amount\" type=\"s:double\" />\r\n        </s:sequence>\r\n
+        \     </s:complexType>\r\n      <s:element name=\"GetSalesTaxValueResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetSalesTaxValueResult\" type=\"tns:SIWsOutputOfTaxValueOutput\"
+        />\r\n            <s:element name=\"SISubscriptionInfo\" type=\"tns:SISubscriptionInfo\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:complexType name=\"SIWsOutputOfTaxValueOutput\">\r\n        <s:sequence>\r\n
+        \         <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"ServiceStatus\"
+        type=\"tns:SIWsStatus\" />\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"ServiceResult\" type=\"tns:TaxValueOutput\" />\r\n        </s:sequence>\r\n
+        \     </s:complexType>\r\n      <s:complexType name=\"SIWsStatus\">\r\n        <s:sequence>\r\n
+        \         <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"StatusNbr\" type=\"s:int\"
+        />\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"StatusDescription\"
+        type=\"s:string\" />\r\n        </s:sequence>\r\n      </s:complexType>\r\n
+        \     <s:complexType name=\"TaxValueOutput\">\r\n        <s:complexContent
+        mixed=\"false\">\r\n          <s:extension base=\"tns:SIWsResultArrayOfTaxValueRecord\">\r\n
+        \           <s:sequence>\r\n              <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"ResolvedFromAddress\" type=\"tns:SpeedTaxAddress\" />\r\n              <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"ResolvedToAddress\" type=\"tns:SpeedTaxAddress\"
+        />\r\n              <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"SalesTaxTotal\"
+        type=\"s:decimal\" />\r\n            </s:sequence>\r\n          </s:extension>\r\n
+        \       </s:complexContent>\r\n      </s:complexType>\r\n      <s:complexType
+        name=\"SIWsResultArrayOfTaxValueRecord\">\r\n        <s:sequence>\r\n          <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"Results\" type=\"tns:ArrayOfTaxValueRecord\"
+        />\r\n        </s:sequence>\r\n      </s:complexType>\r\n      <s:complexType
+        name=\"ArrayOfTaxValueRecord\">\r\n        <s:sequence>\r\n          <s:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"TaxValueRecord\" nillable=\"true\"
+        type=\"tns:TaxValueRecord\" />\r\n        </s:sequence>\r\n      </s:complexType>\r\n
+        \     <s:complexType name=\"TaxValueRecord\">\r\n        <s:complexContent
+        mixed=\"false\">\r\n          <s:extension base=\"tns:SIWsResultWithStatus\">\r\n
+        \           <s:sequence>\r\n              <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"Category\" type=\"s:string\" />\r\n              <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"CategoryID\" type=\"s:string\" />\r\n              <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"SalesTaxAmount\" type=\"s:double\"
+        />\r\n              <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Jurisdictions\"
+        type=\"tns:ArrayOfSalesTaxValueJurisdiction\" />\r\n            </s:sequence>\r\n
+        \         </s:extension>\r\n        </s:complexContent>\r\n      </s:complexType>\r\n
+        \     <s:complexType name=\"SIWsResultWithStatus\" abstract=\"true\">\r\n
+        \       <s:sequence>\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"ItemStatus\" type=\"tns:SIWsStatus\" />\r\n        </s:sequence>\r\n
+        \     </s:complexType>\r\n      <s:complexType name=\"ArrayOfSalesTaxValueJurisdiction\">\r\n
+        \       <s:sequence>\r\n          <s:element minOccurs=\"0\" maxOccurs=\"unbounded\"
+        name=\"SalesTaxValueJurisdiction\" nillable=\"true\" type=\"tns:SalesTaxValueJurisdiction\"
+        />\r\n        </s:sequence>\r\n      </s:complexType>\r\n      <s:complexType
+        name=\"SalesTaxValueJurisdiction\">\r\n        <s:sequence>\r\n          <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"FIPS\" type=\"s:string\" />\r\n          <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"Name\" type=\"s:string\" />\r\n          <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"SalesTaxAmount\" type=\"s:decimal\"
+        />\r\n        </s:sequence>\r\n      </s:complexType>\r\n      <s:element
+        name=\"GetSalesTaxCategories\">\r\n        <s:complexType>\r\n          <s:sequence>\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"UserID\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Password\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetSalesTaxCategoriesResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetSalesTaxCategoriesResult\" type=\"tns:SIWsOutputOfArrayOfSalesTaxCategory\"
+        />\r\n            <s:element name=\"SISubscriptionInfo\" type=\"tns:SISubscriptionInfo\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:complexType name=\"SIWsOutputOfArrayOfSalesTaxCategory\">\r\n        <s:sequence>\r\n
+        \         <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"ServiceStatus\"
+        type=\"tns:SIWsStatus\" />\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"ServiceResult\" type=\"tns:ArrayOfSalesTaxCategory\" />\r\n        </s:sequence>\r\n
+        \     </s:complexType>\r\n      <s:complexType name=\"ArrayOfSalesTaxCategory\">\r\n
+        \       <s:sequence>\r\n          <s:element minOccurs=\"0\" maxOccurs=\"unbounded\"
+        name=\"SalesTaxCategory\" nillable=\"true\" type=\"tns:SalesTaxCategory\"
+        />\r\n        </s:sequence>\r\n      </s:complexType>\r\n      <s:complexType
+        name=\"SalesTaxCategory\">\r\n        <s:sequence>\r\n          <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"Category\" type=\"s:string\" />\r\n
+        \         <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"CategoryID\" type=\"s:string\"
+        />\r\n        </s:sequence>\r\n      </s:complexType>\r\n      <s:element
+        name=\"GetStatusCodesForMethod\">\r\n        <s:complexType>\r\n          <s:sequence>\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"UserID\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Password\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"MethodName\" type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetStatusCodesForMethodResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetStatusCodesForMethodResult\" type=\"tns:SIWsOutputOfMethodStatusRecord\"
+        />\r\n            <s:element name=\"SISubscriptionInfo\" type=\"tns:SISubscriptionInfo\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:complexType name=\"SIWsOutputOfMethodStatusRecord\">\r\n        <s:sequence>\r\n
+        \         <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"ServiceStatus\"
+        type=\"tns:SIWsStatus\" />\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"ServiceResult\" type=\"tns:MethodStatusRecord\" />\r\n        </s:sequence>\r\n
+        \     </s:complexType>\r\n      <s:complexType name=\"MethodStatusRecord\">\r\n
+        \       <s:complexContent mixed=\"false\">\r\n          <s:extension base=\"tns:SIWsResultArrayOfSIWsStatus\">\r\n
+        \           <s:sequence>\r\n              <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"MethodName\" type=\"s:string\" />\r\n            </s:sequence>\r\n
+        \         </s:extension>\r\n        </s:complexContent>\r\n      </s:complexType>\r\n
+        \     <s:complexType name=\"SIWsResultArrayOfSIWsStatus\">\r\n        <s:sequence>\r\n
+        \         <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Results\" type=\"tns:ArrayOfSIWsStatus\"
+        />\r\n        </s:sequence>\r\n      </s:complexType>\r\n      <s:complexType
+        name=\"ArrayOfSIWsStatus\">\r\n        <s:sequence>\r\n          <s:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"SIWsStatus\" nillable=\"true\"
+        type=\"tns:SIWsStatus\" />\r\n        </s:sequence>\r\n      </s:complexType>\r\n
+        \     <s:element name=\"GetStatusCodes\">\r\n        <s:complexType>\r\n          <s:sequence>\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"UserID\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Password\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetStatusCodesResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetStatusCodesResult\" type=\"tns:SIWsOutputOfSIWsResultArrayOfMethodStatusRecord\"
+        />\r\n            <s:element name=\"SISubscriptionInfo\" type=\"tns:SISubscriptionInfo\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:complexType name=\"SIWsOutputOfSIWsResultArrayOfMethodStatusRecord\">\r\n
+        \       <s:sequence>\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"ServiceStatus\" type=\"tns:SIWsStatus\" />\r\n          <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"ServiceResult\" type=\"tns:SIWsResultArrayOfMethodStatusRecord\"
+        />\r\n        </s:sequence>\r\n      </s:complexType>\r\n      <s:complexType
+        name=\"SIWsResultArrayOfMethodStatusRecord\">\r\n        <s:sequence>\r\n
+        \         <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Results\" type=\"tns:ArrayOfMethodStatusRecord\"
+        />\r\n        </s:sequence>\r\n      </s:complexType>\r\n      <s:complexType
+        name=\"ArrayOfMethodStatusRecord\">\r\n        <s:sequence>\r\n          <s:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"MethodStatusRecord\" nillable=\"true\"
+        type=\"tns:MethodStatusRecord\" />\r\n        </s:sequence>\r\n      </s:complexType>\r\n
+        \     <s:element name=\"GetServiceInfo\">\r\n        <s:complexType>\r\n          <s:sequence>\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"UserID\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Password\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetServiceInfoResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetServiceInfoResult\" type=\"tns:SIWsOutputOfSIWsResultArrayOfServiceInfoRecord\"
+        />\r\n            <s:element name=\"SISubscriptionInfo\" type=\"tns:SISubscriptionInfo\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:complexType name=\"SIWsOutputOfSIWsResultArrayOfServiceInfoRecord\">\r\n
+        \       <s:sequence>\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"ServiceStatus\" type=\"tns:SIWsStatus\" />\r\n          <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"ServiceResult\" type=\"tns:SIWsResultArrayOfServiceInfoRecord\"
+        />\r\n        </s:sequence>\r\n      </s:complexType>\r\n      <s:complexType
+        name=\"SIWsResultArrayOfServiceInfoRecord\">\r\n        <s:sequence>\r\n          <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"Results\" type=\"tns:ArrayOfServiceInfoRecord\"
+        />\r\n        </s:sequence>\r\n      </s:complexType>\r\n      <s:complexType
+        name=\"ArrayOfServiceInfoRecord\">\r\n        <s:sequence>\r\n          <s:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"ServiceInfoRecord\" nillable=\"true\"
+        type=\"tns:ServiceInfoRecord\" />\r\n        </s:sequence>\r\n      </s:complexType>\r\n
+        \     <s:complexType name=\"ServiceInfoRecord\">\r\n        <s:sequence>\r\n
+        \         <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"InfoKey\" type=\"s:string\"
+        />\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"InfoValue\"
+        type=\"s:string\" />\r\n        </s:sequence>\r\n      </s:complexType>\r\n
+        \     <s:complexType name=\"SILicenseInfo\">\r\n        <s:sequence>\r\n          <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"UserID\" type=\"s:string\" />\r\n          <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"Password\" type=\"s:string\" />\r\n
+        \       </s:sequence>\r\n      </s:complexType>\r\n      <s:element name=\"SILicenseInfo\"
+        type=\"tns:SILicenseInfo\" />\r\n      <s:complexType name=\"SISubscriptionInfo\">\r\n
+        \       <s:sequence>\r\n          <s:element name=\"LicenseStatusCode\" type=\"s:int\"
+        />\r\n          <s:element minOccurs=\"0\" name=\"LicenseStatus\" type=\"s:string\"
+        />\r\n          <s:element name=\"LicenseActionCode\" type=\"s:int\" />\r\n
+        \         <s:element minOccurs=\"0\" name=\"LicenseAction\" type=\"s:string\"
+        />\r\n          <s:element name=\"RemainingHits\" type=\"s:int\" />\r\n          <s:element
+        name=\"Amount\" type=\"s:decimal\" />\r\n        </s:sequence>\r\n      </s:complexType>\r\n
+        \     <s:element name=\"SISubscriptionInfo\" type=\"tns:SISubscriptionInfo\"
+        />\r\n    </s:schema>\r\n  </wsdl:types>\r\n  <wsdl:message name=\"GetSalesTaxValueSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSalesTaxValue\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"GetSalesTaxValueSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSalesTaxValueResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetSalesTaxCategoriesSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSalesTaxCategories\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"GetSalesTaxCategoriesSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSalesTaxCategoriesResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetStatusCodesForMethodSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetStatusCodesForMethod\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetStatusCodesForMethodSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetStatusCodesForMethodResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetStatusCodesSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetStatusCodes\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetStatusCodesSoapOut\">\r\n    <wsdl:part name=\"parameters\"
+        element=\"tns:GetStatusCodesResponse\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"GetServiceInfoSoapIn\">\r\n    <wsdl:part name=\"parameters\" element=\"tns:GetServiceInfo\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetServiceInfoSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetServiceInfoResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetRemainingHitsSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:SILicenseInfo\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetRemainingHitsSoapOut\">\r\n    <wsdl:part name=\"parameters\"
+        element=\"tns:SISubscriptionInfo\" />\r\n  </wsdl:message>\r\n  <wsdl:portType
+        name=\"SpeedTaxSoap\">\r\n    <wsdl:operation name=\"GetSalesTaxValue\">\r\n
+        \     <wsdl:input message=\"tns:GetSalesTaxValueSoapIn\" />\r\n      <wsdl:output
+        message=\"tns:GetSalesTaxValueSoapOut\" />\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSalesTaxCategories\">\r\n      <wsdl:input message=\"tns:GetSalesTaxCategoriesSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSalesTaxCategoriesSoapOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"GetStatusCodesForMethod\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">Gets
+        all status codes a method in the service might return.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:GetStatusCodesForMethodSoapIn\" />\r\n      <wsdl:output
+        message=\"tns:GetStatusCodesForMethodSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"GetStatusCodes\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">Get all statuses this service
+        might return.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetStatusCodesSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetStatusCodesSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"GetServiceInfo\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">Get information about the
+        web service</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetServiceInfoSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetServiceInfoSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"GetRemainingHits\">\r\n      <wsdl:input message=\"tns:GetRemainingHitsSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetRemainingHitsSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \ </wsdl:portType>\r\n  <wsdl:binding name=\"SpeedTaxSoap\" type=\"tns:SpeedTaxSoap\">\r\n
+        \   <soap:binding transport=\"http://schemas.xmlsoap.org/soap/http\" />\r\n
+        \   <wsdl:operation name=\"GetSalesTaxValue\">\r\n      <soap:operation soapAction=\"http://www.strikeiron.com/GetSalesTaxValue\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSalesTaxCategories\">\r\n      <soap:operation soapAction=\"http://www.strikeiron.com/GetSalesTaxCategories\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetStatusCodesForMethod\">\r\n      <soap:operation soapAction=\"http://www.strikeiron.com/GetStatusCodesForMethod\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetStatusCodes\">\r\n      <soap:operation soapAction=\"http://www.strikeiron.com/GetStatusCodes\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetServiceInfo\">\r\n      <soap:operation soapAction=\"http://www.strikeiron.com/GetServiceInfo\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetRemainingHits\">\r\n      <soap:operation soapAction=\"http://wsparam.strikeiron.com/StrikeIron/SpeedTaxSalesTax3/SpeedTax/GetRemainingHits\"
+        />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\" />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <soap:body use=\"literal\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n  </wsdl:binding>\r\n  <wsdl:service name=\"SpeedTax\">\r\n
+        \   <wsdl:port name=\"SpeedTaxSoap\" binding=\"tns:SpeedTaxSoap\">\r\n      <soap:address
+        location=\"http://wsparam.strikeiron.com/StrikeIron/SpeedTaxSalesTax3/SpeedTax\"
+        />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
+    http_version: 
+  recorded_at: Thu, 03 May 2012 14:28:00 GMT
+recorded_with: VCR 2.1.1
