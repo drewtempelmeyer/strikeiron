@@ -5,8 +5,8 @@ require 'vcr'
 class Test::Unit::TestCase
   def setup
     Strikeiron.configure do |config|
-      config.user_id  = 'youruserid'
-      config.password = 'yourpassword'
+      config.user_id  = 'user_id'
+      config.password = 'password'
     end
   end
 end
@@ -20,6 +20,5 @@ end
 
 # Disable Savon logging to get a cleaner test output
 Savon.configure do |config|
-  config.log          = false
-  config.soap_version = 2  # use SOAP 1.2
+  config.log = false
 end

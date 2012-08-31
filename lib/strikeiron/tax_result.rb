@@ -18,13 +18,24 @@ module Strikeiron #:nodoc:
       # Convert the object from the Strikeiron response
       def from_soap(response)
         tax_values = []
-        response[:results][:tax_value_record].each do |record|
+
+        if response[:results][:tax_value_record].is_a?(Hash)
+          record = response[:results][:tax_value_record]
           tax_values << TaxValue.new(
             :category      => record[:category],
             :category_id   => record[:category_id],
             :tax_amount    => record[:sales_tax_amount].to_f,
             :jurisdictions => record[:jurisdictions][:sales_tax_value_jurisdiction].map { |j| Jurisdiction.new(:fips => j[:fips], :name => j[:name], :tax_amount => j[:sales_tax_amount].to_f) }
           )
+        else
+          response[:results][:tax_value_record].each do |record|
+            tax_values << TaxValue.new(
+              :category      => record[:category],
+              :category_id   => record[:category_id],
+              :tax_amount    => record[:sales_tax_amount].to_f,
+              :jurisdictions => record[:jurisdictions][:sales_tax_value_jurisdiction].map { |j| Jurisdiction.new(:fips => j[:fips], :name => j[:name], :tax_amount => j[:sales_tax_amount].to_f) }
+            )
+          end
         end
 
         new(

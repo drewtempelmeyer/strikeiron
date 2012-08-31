@@ -6,7 +6,7 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://www.strikeiron.com/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://www.strikeiron.com/"
         xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ins0="http://www.strikeiron.com/"><env:Body><ins0:GetSalesTaxCategories><ins0:UserID>user_id</ins0:UserID><ins0:Password>password</ins0:Password></ins0:GetSalesTaxCategories></env:Body></env:Envelope>
     headers:
       Soapaction:
@@ -14,7 +14,7 @@ http_interactions:
       Content-Type:
       - text/xml;charset=UTF-8
       Content-Length:
-      - '470'
+      - '469'
       Accept:
       - ! '*/*'
       User-Agent:
@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 03 May 2012 15:21:36 GMT
+      - Fri, 31 Aug 2012 16:13:25 GMT
       Server:
       - Microsoft-IIS/6.0
       X-Powered-By:
@@ -37,7 +37,7 @@ http_interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Content-Length:
-      - '31966'
+      - '31965'
     body:
       encoding: US-ASCII
       string: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"
@@ -401,8 +401,8 @@ http_interactions:
         \     <SISubscriptionInfo>\r\n        <LicenseStatusCode>0</LicenseStatusCode>\r\n
         \       <LicenseStatus>Valid license key</LicenseStatus>\r\n        <LicenseActionCode>7</LicenseActionCode>\r\n
         \       <LicenseAction>No hit deduction for invocation</LicenseAction>\r\n
-        \       <RemainingHits>100</RemainingHits>\r\n        <Amount>0</Amount>\r\n
+        \       <RemainingHits>83</RemainingHits>\r\n        <Amount>0</Amount>\r\n
         \     </SISubscriptionInfo>\r\n    </GetSalesTaxCategoriesResponse>\r\n  </soap:Body>\r\n</soap:Envelope>"
-    http_version:
-  recorded_at: Thu, 03 May 2012 15:21:36 GMT
-recorded_with: VCR 2.1.1
+    http_version: 
+  recorded_at: Fri, 31 Aug 2012 16:13:26 GMT
+recorded_with: VCR 2.2.4

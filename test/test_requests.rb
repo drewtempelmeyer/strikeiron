@@ -33,6 +33,36 @@ class TestRequests < Test::Unit::TestCase
     end
   end
 
+  def test_sales_tax_for_single_tax_value
+    from = Strikeiron::Address.new(
+      :street_address => 'One Microsoft Way',
+      :city           => 'Redmond',
+      :state          => 'WA',
+      :zip_code       => '98052'
+    )
+
+    to = Strikeiron::Address.new(
+      :street_address => '902 Broadway',
+      :city           => 'New York',
+      :state          => 'NY',
+      :zip_code       => '10010'
+    )
+
+    items = [ Strikeiron::TaxValue.new(:category => '01151605', :amount => 239.41) ]
+    VCR.use_cassette('single item sales tax') do
+      response = Strikeiron.sales_tax(
+        :from       => from,
+        :to         => to,
+        :tax_values => items
+      )
+
+      assert_equal Strikeiron::TaxResult, response.class
+      assert_equal 1, response.tax_values.size
+      assert_equal 21.25, response.total_tax
+      assert_not_equal 0, response.tax_values[0].jurisdictions.size
+    end
+  end
+
   def test_tax_categories
     VCR.use_cassette('tax categories') do
       categories = Strikeiron.tax_categories

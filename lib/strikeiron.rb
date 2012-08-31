@@ -23,9 +23,7 @@ module Strikeiron
 
     # Singleton Savon client
     def client
-      @@client ||= Savon::Client.new do
-        wsdl.document = WSDL
-      end
+      @@client ||= Savon::Client.new(WSDL)
     end
 
     # Get the calculated online sales tax for a product or service
