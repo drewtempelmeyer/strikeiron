@@ -17,25 +17,20 @@ module Strikeiron #:nodoc:
     class << self
       # Convert the object from the Strikeiron response
       def from_soap(response)
-        tax_values = []
+        tax_values       = []
+        response_records = response[:results][:tax_value_record]
+        response_records = [ response_records ] if response_records.is_a?(Hash)
 
-        if response[:results][:tax_value_record].is_a?(Hash)
-          record = response[:results][:tax_value_record]
+        response_records.each do |record|
+          jurisdictions = record[:jurisdictions][:sales_tax_value_jurisdiction]
+          jurisdictions = [ jurisdictions ] if jurisdictions.is_a?(Hash)
+
           tax_values << TaxValue.new(
             :category      => record[:category],
             :category_id   => record[:category_id],
             :tax_amount    => record[:sales_tax_amount].to_f,
-            :jurisdictions => record[:jurisdictions][:sales_tax_value_jurisdiction].map { |j| Jurisdiction.new(:fips => j[:fips], :name => j[:name], :tax_amount => j[:sales_tax_amount].to_f) }
+            :jurisdictions => jurisdictions.map { |j| Jurisdiction.new(:fips => j[:fips], :name => j[:name], :tax_amount => j[:sales_tax_amount].to_f) }
           )
-        else
-          response[:results][:tax_value_record].each do |record|
-            tax_values << TaxValue.new(
-              :category      => record[:category],
-              :category_id   => record[:category_id],
-              :tax_amount    => record[:sales_tax_amount].to_f,
-              :jurisdictions => record[:jurisdictions][:sales_tax_value_jurisdiction].map { |j| Jurisdiction.new(:fips => j[:fips], :name => j[:name], :tax_amount => j[:sales_tax_amount].to_f) }
-            )
-          end
         end
 
         new(
