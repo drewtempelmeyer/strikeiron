@@ -4,21 +4,23 @@ http_interactions:
     method: post
     uri: http://wsparam.strikeiron.com/StrikeIron/SpeedTaxSalesTax3/SpeedTax
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://www.strikeiron.com/"
-        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ins0="http://www.strikeiron.com/"><env:Body><ins0:GetSalesTaxValue><ins0:UserID>user_id</ins0:UserID><ins0:Password>password</ins0:Password><ins0:ShipFrom><ins0:StreetAddress>One
-        Microsoft Way</ins0:StreetAddress><ins0:City>Redmond</ins0:City><ins0:State>WA</ins0:State><ins0:ZIPCode>98052</ins0:ZIPCode></ins0:ShipFrom><ins0:ShipTo><ins0:StreetAddress>902
-        Broadway</ins0:StreetAddress><ins0:City>New York</ins0:City><ins0:State>NY</ins0:State><ins0:ZIPCode>10010</ins0:ZIPCode></ins0:ShipTo><ins0:TaxValueRequests><ins0:TaxValueRequest><tns:SalesTaxCategoryOrCategoryID>01151605</tns:SalesTaxCategoryOrCategoryID><tns:Amount>239.41</tns:Amount></ins0:TaxValueRequest><ins0:TaxValueRequest><tns:SalesTaxCategoryOrCategoryID>01151605</tns:SalesTaxCategoryOrCategoryID><tns:Amount>239.41</tns:Amount></ins0:TaxValueRequest></ins0:TaxValueRequests></ins0:GetSalesTaxValue></env:Body></env:Envelope>
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><tns:GetSalesTaxValue><tns:UserID>user_id</tns:UserID><tns:Password>password</tns:Password><tns:ShipFrom><tns:StreetAddress>One
+        Microsoft Way</tns:StreetAddress><tns:City>Redmond</tns:City><tns:State>WA</tns:State><tns:ZIPCode>98052</tns:ZIPCode></tns:ShipFrom><tns:ShipTo><tns:StreetAddress>902
+        Broadway</tns:StreetAddress><tns:City>New York</tns:City><tns:State>NY</tns:State><tns:ZIPCode>10010</tns:ZIPCode></tns:ShipTo><tns:TaxValueRequests><tns:TaxValueRequest><tns:SalesTaxCategoryOrCategoryID>01151605</tns:SalesTaxCategoryOrCategoryID><tns:Amount>239.41</tns:Amount></tns:TaxValueRequest><tns:TaxValueRequest><tns:SalesTaxCategoryOrCategoryID>01151605</tns:SalesTaxCategoryOrCategoryID><tns:Amount>239.41</tns:Amount></tns:TaxValueRequest></tns:TaxValueRequests></tns:GetSalesTaxValue></env:Body></env:Envelope>
     headers:
       Soapaction:
-      - ! '"http://www.strikeiron.com/GetSalesTaxValue"'
+      - '"http://www.strikeiron.com/GetSalesTaxValue"'
       Content-Type:
       - text/xml;charset=UTF-8
       Content-Length:
-      - '1164'
+      - '1081'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - ! '*/*'
+      - '*/*'
       User-Agent:
       - Ruby
   response:
@@ -27,7 +29,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 31 Aug 2012 16:13:24 GMT
+      - Tue, 04 Jun 2013 14:51:47 GMT
       Server:
       - Microsoft-IIS/6.0
       X-Powered-By:
@@ -41,8 +43,8 @@ http_interactions:
       Content-Length:
       - '3970'
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"
         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n
         \ <soap:Body>\r\n    <GetSalesTaxValueResponse xmlns=\"http://www.strikeiron.com/\">\r\n
         \     <GetSalesTaxValueResult>\r\n        <ServiceStatus>\r\n          <StatusNbr>201</StatusNbr>\r\n
@@ -54,10 +56,10 @@ http_interactions:
         delivered electronically</Category>\r\n              <CategoryID>01151605</CategoryID>\r\n
         \             <SalesTaxAmount>21.25</SalesTaxAmount>\r\n              <Jurisdictions>\r\n
         \               <SalesTaxValueJurisdiction>\r\n                  <FIPS>36</FIPS>\r\n
-        \                 <Name>New York</Name>\r\n                  <SalesTaxAmount>9.57</SalesTaxAmount>\r\n
+        \                 <Name>New York</Name>\r\n                  <SalesTaxAmount>9.58</SalesTaxAmount>\r\n
         \               </SalesTaxValueJurisdiction>\r\n                <SalesTaxValueJurisdiction>\r\n
         \                 <FIPS>CTD51000</FIPS>\r\n                  <Name>METRO COMMUTER
-        TRANS. DISTRICT</Name>\r\n                  <SalesTaxAmount>0.89</SalesTaxAmount>\r\n
+        TRANS. DISTRICT</Name>\r\n                  <SalesTaxAmount>0.9</SalesTaxAmount>\r\n
         \               </SalesTaxValueJurisdiction>\r\n                <SalesTaxValueJurisdiction>\r\n
         \                 <FIPS>061</FIPS>\r\n                  <Name>NEW YORK</Name>\r\n
         \                 <SalesTaxAmount>10.77</SalesTaxAmount>\r\n                </SalesTaxValueJurisdiction>\r\n
@@ -68,10 +70,10 @@ http_interactions:
         delivered electronically</Category>\r\n              <CategoryID>01151605</CategoryID>\r\n
         \             <SalesTaxAmount>21.25</SalesTaxAmount>\r\n              <Jurisdictions>\r\n
         \               <SalesTaxValueJurisdiction>\r\n                  <FIPS>36</FIPS>\r\n
-        \                 <Name>New York</Name>\r\n                  <SalesTaxAmount>9.57</SalesTaxAmount>\r\n
+        \                 <Name>New York</Name>\r\n                  <SalesTaxAmount>9.58</SalesTaxAmount>\r\n
         \               </SalesTaxValueJurisdiction>\r\n                <SalesTaxValueJurisdiction>\r\n
         \                 <FIPS>CTD51000</FIPS>\r\n                  <Name>METRO COMMUTER
-        TRANS. DISTRICT</Name>\r\n                  <SalesTaxAmount>0.89</SalesTaxAmount>\r\n
+        TRANS. DISTRICT</Name>\r\n                  <SalesTaxAmount>0.9</SalesTaxAmount>\r\n
         \               </SalesTaxValueJurisdiction>\r\n                <SalesTaxValueJurisdiction>\r\n
         \                 <FIPS>061</FIPS>\r\n                  <Name>NEW YORK</Name>\r\n
         \                 <SalesTaxAmount>10.77</SalesTaxAmount>\r\n                </SalesTaxValueJurisdiction>\r\n
@@ -80,14 +82,14 @@ http_interactions:
         WAY</StreetAddress>\r\n            <City>REDMOND</City>\r\n            <State>WA</State>\r\n
         \           <ZIPCode>98052</ZIPCode>\r\n          </ResolvedFromAddress>\r\n
         \         <ResolvedToAddress>\r\n            <StreetAddress>902 BROADWAY</StreetAddress>\r\n
-        \           <City>NEW YORK</City>\r\n            <State>NY</State>\r\n            <ZIPCode>10010-6041</ZIPCode>\r\n
+        \           <City>NEW YORK</City>\r\n            <State>NY</State>\r\n            <ZIPCode>10010-6038</ZIPCode>\r\n
         \         </ResolvedToAddress>\r\n          <SalesTaxTotal>42.5</SalesTaxTotal>\r\n
         \       </ServiceResult>\r\n      </GetSalesTaxValueResult>\r\n      <SISubscriptionInfo>\r\n
         \       <LicenseStatusCode>0</LicenseStatusCode>\r\n        <LicenseStatus>Valid
         license key</LicenseStatus>\r\n        <LicenseActionCode>0</LicenseActionCode>\r\n
-        \       <LicenseAction>Decremented hit count</LicenseAction>\r\n        <RemainingHits>83</RemainingHits>\r\n
+        \       <LicenseAction>Decremented hit count</LicenseAction>\r\n        <RemainingHits>8158</RemainingHits>\r\n
         \       <Amount>0</Amount>\r\n      </SISubscriptionInfo>\r\n    </GetSalesTaxValueResponse>\r\n
         \ </soap:Body>\r\n</soap:Envelope>"
     http_version: 
-  recorded_at: Fri, 31 Aug 2012 16:13:24 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Tue, 04 Jun 2013 14:51:50 GMT
+recorded_with: VCR 2.5.0

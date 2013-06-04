@@ -6,5 +6,10 @@ module Strikeiron #:nodoc:
   # * <tt>password</tt> - The password/key that Strikeiron supplied for API use.
   class Configuration
     attr_accessor :user_id, :password
+    attr_writer :logging
+
+    def logging
+      @logging ||= false
+    end
   end
 end

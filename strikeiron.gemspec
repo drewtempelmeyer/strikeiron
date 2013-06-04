@@ -15,11 +15,11 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Strikeiron::VERSION
 
-  gem.add_dependency 'savon', '~> 1.0'
+  gem.add_dependency 'savon', '~> 2.0'
 
   gem.add_development_dependency 'rake', '~> 0.9.2'
   gem.add_development_dependency 'rdoc', '~> 3.12'
-  gem.add_development_dependency 'vcr', '~> 2.1.1'
+  gem.add_development_dependency 'vcr', '~> 2.5.0'
   gem.add_development_dependency 'webmock', '~> 1.8.6'
 
 end

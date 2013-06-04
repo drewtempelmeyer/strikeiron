@@ -8,7 +8,7 @@ class TestClient < Test::Unit::TestCase
 
   def test_client_actions
     VCR.use_cassette('client actions') do
-      actions = Strikeiron.client.wsdl.soap_actions
+      actions = Strikeiron.client.operations
       supported_actions = %w(get_sales_tax_value get_sales_tax_categories get_remaining_hits)
       supported_actions.each do |action|
         assert_equal true, actions.include?(action.to_sym)

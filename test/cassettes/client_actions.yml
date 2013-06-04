@@ -7,8 +7,10 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - ! '*/*'
+      - '*/*'
       User-Agent:
       - Ruby
   response:
@@ -17,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 31 Aug 2012 16:13:23 GMT
+      - Tue, 04 Jun 2013 14:51:45 GMT
       Server:
       - Microsoft-IIS/6.0
       X-Powered-By:
@@ -33,8 +35,8 @@ http_interactions:
       Set-Cookie:
       - BIGipServerws.strikeiron.com=3257998296.20480.0000; path=/
     body:
-      encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wsdl:definitions xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\"
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wsdl:definitions xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\"
         xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\"
         xmlns:tns=\"http://www.strikeiron.com/\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\"
         xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\" xmlns:s=\"http://www.w3.org/2001/XMLSchema\"
@@ -286,5 +288,5 @@ http_interactions:
         location=\"http://wsparam.strikeiron.com/StrikeIron/SpeedTaxSalesTax3/SpeedTax\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
     http_version: 
-  recorded_at: Fri, 31 Aug 2012 16:13:23 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Tue, 04 Jun 2013 14:51:48 GMT
+recorded_with: VCR 2.5.0

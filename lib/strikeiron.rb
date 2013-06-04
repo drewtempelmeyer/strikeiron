@@ -23,7 +23,8 @@ module Strikeiron
 
     # Singleton Savon client
     def client
-      @@client ||= Savon::Client.new(WSDL)
+      @@client ||= Savon.client(:wsdl => WSDL, :ssl_version => :SSLv3, :ssl_verify_mode => :none,
+                                :log => configuration.logging)
     end
 
     # Get the calculated online sales tax for a product or service
@@ -39,17 +40,15 @@ module Strikeiron
       # Raise an error if the required option is not defined
       required_options.each { |val| raise ArgumentError, "Missing option :#{val}" if !options.include?(val.to_sym) }
 
-      response = client.request(:get_sales_tax_value) do |soap|
-        soap.body = {
-          'UserID'          => configuration.user_id,
-          'Password'        => configuration.password,
-          'ShipFrom'        => options[:from].to_soap,
-          'ShipTo'          => options[:to].to_soap,
-          'TaxValueRequests' => { 'TaxValueRequest' => options[:tax_values].map(&:to_soap) }
-        }
-      end
+      response = client.call(:get_sales_tax_value, :message => {
+        'UserID'          => configuration.user_id,
+        'Password'        => configuration.password,
+        'ShipFrom'        => options[:from].to_soap,
+        'ShipTo'          => options[:to].to_soap,
+        'TaxValueRequests' => { 'TaxValueRequest' => options[:tax_values].map(&:to_soap) }
+      })
 
-      response_code = response[:get_sales_tax_value_response][:get_sales_tax_value_result][:service_status][:status_nbr]
+      response_code = response.body[:get_sales_tax_value_response][:get_sales_tax_value_result][:service_status][:status_nbr]
 
       # Raise exceptions if there was an error when calculating the tax
       case response_code.to_i
@@ -63,7 +62,7 @@ module Strikeiron
         raise RuntimeError, 'Internal Strikeiron server error.'
       end
 
-      Strikeiron::TaxResult.from_soap(response[:get_sales_tax_value_response][:get_sales_tax_value_result][:service_result])
+      Strikeiron::TaxResult.from_soap(response.body[:get_sales_tax_value_response][:get_sales_tax_value_result][:service_result])
     end
 
     # Performs a request to obtain a list of all available category names and their corresponding ID number.
@@ -72,17 +71,15 @@ module Strikeiron
     #   Strikeiron.tax_categories
     #   # => [{:category=>"Alcohol", :category_id=>"01051000"}, {:category=>"Alcoholic Beverages", :category_id=>"01050000"}, {:category=>"Beer", :category_id=>"01052000"}, {:category=>"Books", :category_id=>"01501500"}, {:category=>"Charges necessary to complete sale other than delivery and installation", :category_id=>"04800000"}]
     def tax_categories
-      response = client.request(:get_sales_tax_categories) do |soap|
-        soap.body = {
-          'UserID'   => configuration.user_id,
-          'Password' => configuration.password
-        }
-      end
+      response = client.call(:get_sales_tax_categories, :message => {
+        'UserID'   => configuration.user_id,
+        'Password' => configuration.password
+      })
 
       # Return an empty array if the response was not successful
-      return [] if response[:get_sales_tax_categories_response][:get_sales_tax_categories_result][:service_status][:status_nbr] != '200'
+      return [] if response.body[:get_sales_tax_categories_response][:get_sales_tax_categories_result][:service_status][:status_nbr] != '200'
 
-      response[:get_sales_tax_categories_response][:get_sales_tax_categories_result][:service_result][:sales_tax_category]
+      response.body[:get_sales_tax_categories_response][:get_sales_tax_categories_result][:service_result][:sales_tax_category]
     end
 
     # The number of API hits remanining for the configured account
@@ -91,16 +88,13 @@ module Strikeiron
     #   Strikeiron.remaining_hits
     #   # => 100
     def remaining_hits
-      response = client.request(:get_remaining_hits) do |soap|
-        soap.body = {
-          'UserID'   => configuration.user_id,
-          'Password' => configuration.password
-        }
-      end
-      response[:si_subscription_info][:remaining_hits].to_i
+      response = client.call(:get_remaining_hits, :message => {
+        'UserID'   => configuration.user_id,
+        'Password' => configuration.password
+      })
+
+      response.body[:si_subscription_info][:remaining_hits].to_i
     end
-
-
 
   end
 
